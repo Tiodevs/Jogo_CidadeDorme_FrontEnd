@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+:root {
+    --branco: #FFFFFF;
+    --fundo:  #D9C3A4;
+    --preto:  #000000;
+    --verde : #359043;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: "Lexend", sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+a, p, h1, h2 {
+    text-decoration: none;
+    color: var(--branco);
+}
+
+body {
+    background-color: var(--preto);
+    font-family: "Lexend", sans-serif;
+}
+
+body,
+input,
+textarea,
+select,
+button {
+    font-family: "Lexend", sans-serif;
+    font: 400 1rem sans-serif;
+}
