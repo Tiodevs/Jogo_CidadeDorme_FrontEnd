@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Manrope:wght@200..800&display=swap');
 :root {
     --branco: #FFFFFF;
     --fundo:  #D9C3A4;
@@ -12,21 +11,23 @@
     padding: 0;
     outline: 0;
     box-sizing: border-box;
-    font-family: "Lexend", sans-serif;
+    font-family: "Jersey 10", sans-serif;
 }
 
 button {
     cursor: pointer;
+    font-family: "Jersey 10", sans-serif;
 }
 
 a, p, h1, h2 {
+    font-family: "Jersey 10", sans-serif;
     text-decoration: none;
-    color: var(--branco);
+    color: var(--preto);
 }
 
 body {
-    background-color: var(--preto);
-    font-family: "Lexend", sans-serif;
+    background-color: var(--fundo);
+    font-family: "Jersey 10", sans-serif;
 }
 
 body,
@@ -34,6 +35,6 @@ input,
 textarea,
 select,
 button {
-    font-family: "Lexend", sans-serif;
+    font-family: "Jersey 10", sans-serif;
     font: 400 1rem sans-serif;
 }

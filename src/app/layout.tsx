@@ -3,8 +3,8 @@ import "./globals.scss";
 import { Toaster } from 'sonner'
 
 export const metadata: Metadata = {
-  title: "HRSysten",
-  description: "Sistema de HR",
+  title: "Cidade dorme",
+  description: "Jogo cidade dorme",
 };
 
 export default function RootLayout({

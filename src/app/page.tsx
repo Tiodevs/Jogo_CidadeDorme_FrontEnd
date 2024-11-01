@@ -24,36 +24,44 @@ export default function Home() {
   return (
     <>
       <div className={styles.containerCenter}>
-        <h1>Criar Sala</h1>
+        <h1 className={styles.title}>Criar Sala</h1>
 
-        <section className={styles.login}>
+        <section className={styles.form}>
           <form action={onSubmit}>
+            <label>
+              Quantidade de pessoas:
+            </label>
             <input
               type="text"
               required
               name="CountPerson"
-              placeholder="CountPerson"
               className={styles.input}
             />
+            <label>
+              Quantidade de investigadores:
+            </label>
             <input
               type="text"
               required
               name="CountPolice"
-              placeholder="CountPolice"
               className={styles.input}
             />
+            <label>
+              Quantidade de assasino:
+            </label>
             <input
               type="text"
               required
               name="CountKiller"
-              placeholder="CountKiller"
               className={styles.input}
             />
+            <label>
+              Quantidade de curandeiros:
+            </label>
             <input
               type="text"
               required
               name="CountHealer"
-              placeholder="CountHealer"
               className={styles.input}
             />
 

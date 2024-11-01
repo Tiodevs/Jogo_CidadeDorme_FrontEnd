@@ -1,5 +1,6 @@
 "use client";
 
+import styles from "./page.module.scss";
 import { useEffect, useState } from "react";
 import { handleAddPlayer } from "../actions/serverActions"; // Importa a função do servidor
 import { api } from "../services/api";
@@ -40,6 +41,10 @@ export default function Home({ params }: Props) {
     console.log("Adicionar classes")
   }
 
+  function handleRedirect(id: string) {
+    window.location.href = `/${decodedId}/${id}`;
+  }
+
   useEffect(() => {
     getPlayers();
   }, []);
@@ -47,22 +52,29 @@ export default function Home({ params }: Props) {
   console.log(players)
 
   return (
-    <div>
-      <div>
+    <div className={styles.containerCenter}>
+
+      <h1 className={styles.title}>Entrar no jogo</h1>
+
+      <div className={styles.jogadoressection}>
         {players.map((item: any) => (
-          <div key={item.id}>
+          <div key={item.id} className={styles.jogadores}>
             <h1>{item.name}</h1>
-            <h1>{item.id}</h1>
+            <button onClick={() => handleRedirect(item.id)}>Entrar</button>
           </div>
         ))}
       </div>
 
-      <button onClick={()=> assignclasses()}>Começar jogo</button>
 
-      <form onSubmit={onSubmit}>
-        <input type="text" required name="name" placeholder="name" />
-        <button type="submit">Adicionar</button>
-      </form>
+      <button className={styles.btn} onClick={() => assignclasses()}>Começar jogo</button>
+
+      <div className={styles.form}>
+        <form onSubmit={onSubmit}>
+          <label>Nome</label>
+          <input type="text" required name="name" />
+          <button type="submit">Adicionar</button>
+        </form>
+      </div>
     </div>
   );
 }
